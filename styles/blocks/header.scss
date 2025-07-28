@@ -1,0 +1,53 @@
+@use "../base/vars" as *;
+@use "../base/buttons";
+
+header {
+  padding: 32px 0 105px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  margin-right: 65px;
+
+  &--menu {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &--link {
+    color: $color-headings;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.698rem + 0.2vw, 1rem);
+    line-height: 1.714;
+    position: relative;
+    transition: font-weight 0.1s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.625rem;
+      height: 0.125rem;
+      width: 100%;
+      background-color: $color-headings;
+      transform: scaleX(0);
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

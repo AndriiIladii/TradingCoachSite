@@ -1,0 +1,69 @@
+@use "../base/vars" as *;
+@use "../base/buttons";
+
+.service__section {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  padding: 130px 0;
+  background-color: $color-lightGreen;
+}
+
+.service__section--img {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    content: "";
+    z-index: -1;
+    width: 145px;
+    height: 337px;
+    background-image: url("../assets/hero_section/hero-photo-bg.png");
+  }
+
+  img {
+    border-radius: 214px 0 219px 216px;
+    width: 518px;
+    height: 541px;
+  }
+}
+
+.service__section--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service__section--info {
+  max-width: 630px;
+}
+
+.service__info--heading {
+  p {
+    margin: 20px 0;
+  }
+}
+
+.service__info--checkboxes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+  margin-bottom: 44px;
+
+  p {
+    position: relative;
+    margin-left: 23px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 5px;
+      background-image: url("../assets/service_section/checkbox.svg");
+      width: 17px;
+      aspect-ratio: 1;
+    }
+  }
+}

@@ -4,7 +4,10 @@
 @use "./base/fonts";
 @use "./base/vars" as *;
 @use "./base/base";
+@use "./base/buttons";
 
 // Blocks
 
-@use "./blocks/header.scss";
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./blocks/services";
