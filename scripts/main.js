@@ -21,3 +21,11 @@ function startProgress() {
 }
 
 startProgress();
+
+const accordionBox = document.querySelectorAll(".faq__accordion");
+
+accordionBox.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
