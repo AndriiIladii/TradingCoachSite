@@ -6,11 +6,21 @@
 @use "./base/base";
 @use "./base/buttons";
 
-// Blocks
+// Main Blocks
 
-@use "./blocks/header";
-@use "./blocks/hero";
-@use "./blocks/services";
-@use "./blocks/solutions";
-@use "./blocks/faq";
-@use "./blocks/footer";
+@use "./blocks/main/header";
+@use "./blocks/main/hero";
+@use "./blocks/main/services";
+@use "./blocks/main/solutions";
+@use "./blocks/main/faq";
+@use "./blocks/main/footer";
+
+// About Blocks
+
+@use "./blocks/about/hero_about";
+@use "./blocks/about/appointment_about";
+
+// Contact Blocks
+
+@use "./blocks/contact/contact_form";
+@use "./blocks/contact/contact_address";

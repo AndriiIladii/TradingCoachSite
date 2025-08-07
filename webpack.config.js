@@ -1,13 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const isDev = process.env.NODE_ENV === "development";
-
 module.exports = {
-  entry: "./scripts/main.js",
+  entry: {
+    main: "./scripts/main.js",
+    about: "./scripts/about.js",
+    contact: "./scripts/contact.js",
+  },
+
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -43,8 +46,23 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
+      filename: "index.html",
+      chunks: ["main"],
       inject: "body",
     }),
+    new HtmlWebpackPlugin({
+      template: "src/about.html",
+      filename: "about.html",
+      chunks: ["about"],
+      inject: "body",
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/contact.html",
+      filename: "contact.html",
+      chunks: ["contact"],
+      inject: "body",
+    }),
+
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),

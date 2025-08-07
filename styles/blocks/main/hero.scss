@@ -1,5 +1,5 @@
-@use "../base/buttons";
-@use "../base/vars" as *;
+@use "../../base/buttons";
+@use "../../base/vars" as *;
 
 .hero__section {
   padding: 0 0 130px;
@@ -35,8 +35,6 @@
 
   img {
     border-radius: 214px 0 219px 216px;
-    width: 517px;
-    height: 536px;
   }
 }
 

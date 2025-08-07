@@ -1,5 +1,5 @@
-@use "../base/vars" as *;
-@use "../base/buttons";
+@use "../../base/vars" as *;
+@use "../../base/buttons";
 
 .service__section {
   position: relative;
@@ -25,8 +25,6 @@
 
   img {
     border-radius: 214px 0 219px 216px;
-    width: 518px;
-    height: 541px;
   }
 }
 
