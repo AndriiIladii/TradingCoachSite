@@ -1,0 +1,76 @@
+@use "../../base/vars" as *;
+
+.section__address {
+  padding: 100px 0;
+  background-color: $color-lightGreen;
+
+  &--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 90px;
+  }
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 405px;
+    height: 225px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 51, 0.08);
+    background-color: $color-white;
+  }
+
+  &--info {
+    max-width: 220px;
+    margin-top: 25px;
+    color: $color-headings;
+    font-weight: 400;
+  }
+
+  &--email,
+  &--tel,
+  &--location {
+    position: relative;
+  }
+
+  &--email {
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 24px;
+      aspect-ratio: 1;
+      background-image: url("../assets/contacts_section/email.svg");
+    }
+  }
+
+  &--tel {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 24px;
+      aspect-ratio: 1;
+      background-image: url("../assets/contacts_section/call.svg");
+    }
+  }
+
+  &--location {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 24px;
+      aspect-ratio: 1;
+      background-image: url("../assets/contacts_section/room.svg");
+    }
+  }
+}
