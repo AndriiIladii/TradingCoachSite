@@ -4,24 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <title></title>
+    <title>Oleksandr Boiko</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
-            <a href="#">
+            <a href="./index.html">
               <img src="../assets/header_section/logo-n.png" alt="Logo"
             /></a>
           </div>
           <div class="nav__wrapper">
             <nav class="header__nav">
               <ul class="header__nav--menu">
-                <li><a class="header__nav--link active" href="#">Home</a></li>
+                <li>
+                  <a class="header__nav--link active" href="./index.html"
+                    >Home</a
+                  >
+                </li>
                 <li>
                   <a class="header__nav--link" href="./about.html">About</a>
                 </li>
@@ -71,7 +78,7 @@
         <div class="container">
           <div class="service__section--wrapper">
             <div class="service__section--img">
-              <img src="../assets/hero_section/sasha.jpg" alt="service" />
+              <img src="../assets/service_section/sasha.jpg" alt="service" />
             </div>
             <div class="service__section--info">
               <div class="service__info--heading">
@@ -104,7 +111,7 @@
           <div class="solutions__cards">
             <div class="solutions__cards--item">
               <div class="solutions__item--image">
-                <i class="bx bx-search-alt"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
               </div>
               <div class="solutions__item--info">
                 <h4>We analyze</h4>
@@ -113,35 +120,43 @@
                   mistakes, and guide you step by step toward smarter decisions
                   and consistent, long-term trading improvement.
                 </p>
-                <button class="solutions__item--btn btn">Learn More</button>
               </div>
             </div>
             <div class="solutions__cards--item">
               <div class="solutions__item--image">
-                <i class="bx bx-target"></i>
+                <i class="fa-solid fa-handshake"></i>
               </div>
               <div class="solutions__item--info">
-                <h4>We find gaps</h4>
+                <h4>Improvement</h4>
                 <p>
-                  I identify the gaps in your trading strategy, mindset, or
-                  routine and help you fix them with personalized guidance, so
-                  you grow with clarity and confidence.
+                  We work on the areas you'd like to improve, as well as the
+                  issues I identify after reviewing your trading journal.
                 </p>
-                <button class="solutions__item--btn btn">Learn More</button>
               </div>
             </div>
             <div class="solutions__cards--item">
               <div class="solutions__item--image">
-                <i class="bx bx-car-key"></i>
+                <i class="fa-solid fa-laptop"></i>
               </div>
               <div class="solutions__item--info">
-                <h4>We conduct</h4>
+                <h4>Backtesting</h4>
                 <p>
-                  I conduct a deep analysis of your trading behavior, routines,
-                  and results to uncover hidden patterns and provide tailored
-                  advice for steady, long-term improvement.
+                  Once we’ve addressed the key issues and I’ve provided you with
+                  new tools or approaches, you begin backtesting to reinforce
+                  and validate the changes.
                 </p>
-                <button class="solutions__item--btn btn">Learn More</button>
+              </div>
+            </div>
+            <div class="solutions__cards--item">
+              <div class="solutions__item--image">
+                <i class="fa-solid fa-flag-checkered"></i>
+              </div>
+              <div class="solutions__item--info">
+                <h4>Final check</h4>
+                <p>
+                  After you've finished backtesting I'm going to check your
+                  backtest and see if you're ready to go.
+                </p>
               </div>
             </div>
           </div>
@@ -156,7 +171,7 @@
             <div class="faq__accordion">
               <div class="faq__accordion--header">
                 <h3>Is the first session free?</h3>
-                <i class="bx bx-arrow-down-stroke"></i>
+                <i class="fa-solid fa-arrow-down"></i>
               </div>
               <div class="faq__accordion--content">
                 <p>
@@ -169,7 +184,7 @@
             <div class="faq__accordion">
               <div class="faq__accordion--header">
                 <h3>When will I see results?</h3>
-                <i class="bx bx-arrow-down-stroke"></i>
+                <i class="fa-solid fa-arrow-down"></i>
               </div>
               <div class="faq__accordion--content">
                 <p>
@@ -182,7 +197,7 @@
             <div class="faq__accordion">
               <div class="faq__accordion--header">
                 <h3>Do you trade yourself?</h3>
-                <i class="bx bx-arrow-down-stroke"></i>
+                <i class="fa-solid fa-arrow-down"></i>
               </div>
               <div class="faq__accordion--content">
                 <p>
@@ -195,7 +210,7 @@
             <div class="faq__accordion">
               <div class="faq__accordion--header">
                 <h3>How can I schedule a call?</h3>
-                <i class="bx bx-arrow-down-stroke"></i>
+                <i class="fa-solid fa-arrow-down"></i>
               </div>
               <div class="faq__accordion--content">
                 <p>
@@ -207,10 +222,24 @@
             <div class="faq__accordion">
               <div class="faq__accordion--header">
                 <h3>Will the session be with you or someone else?</h3>
-                <i class="bx bx-arrow-down-stroke"></i>
+                <i class="fa-solid fa-arrow-down"></i>
               </div>
               <div class="faq__accordion--content">
                 <p>Only with me.</p>
+              </div>
+            </div>
+            <div class="faq__accordion">
+              <div class="faq__accordion--header">
+                <h3>If I start from zero what should I do ?</h3>
+                <i class="fa-solid fa-arrow-down"></i>
+              </div>
+              <div class="faq__accordion--content">
+                <p>
+                  You can either study the free material available online or
+                  study with me. A full course costs $1000. There’s no time
+                  limit for the course — I will guide you for as long as
+                  necessary.
+                </p>
               </div>
             </div>
           </div>
@@ -221,32 +250,47 @@
       <div class="container">
         <div class="footer__wrapper">
           <div class="footer__logo">
-            <img src="../assets/header_section/logo-n.png" alt="logo" />
-            <p>88/89 Peter Odili Road, Port Harcourt, Rivers State.</p>
+            <a href="#header"
+              ><img src="../assets/header_section/logo-n.png" alt="logo"
+            /></a>
           </div>
           <nav class="footer__nav">
             <ul>
-              <li class="footer__nav--item"><a href="#">Home</a></li>
-              <li class="footer__nav--item"><a href="#">About</a></li>
-              <li class="footer__nav--item"><a href="#">Contact</a></li>
+              <li class="footer__nav--item"><a href="#header">Home</a></li>
+              <li class="footer__nav--item">
+                <a href="./about.html">About</a>
+              </li>
+              <li class="footer__nav--item">
+                <a href="./contact.html">Contact</a>
+              </li>
             </ul>
           </nav>
           <div class="footer__contacts">
             <p>Connect with us</p>
             <div class="footer__contacts--socials">
-              <a href="#"
-                ><img src="../assets/footer__section/twitter.svg" alt="twitter"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../assets/footer__section/instagram.svg"
-                  alt="twitter"
-              /></a>
-              <a href="#"
-                ><img
-                  src="../assets/footer__section/facebook.svg"
-                  alt="twitter"
-              /></a>
+              <a
+                href="https://www.youtube.com/@OleksandrBoiko-TradingCoaching"
+                target="_blank"
+                title="YouTube link"
+              >
+                <i class="fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.twitch.tv/tradingcoachingoleksandr"
+                target="_blank"
+                ><i class="fa-brands fa-twitch" title="Twitch link"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/oleksandr_trading_coach/"
+                target="_blank"
+                ><i class="fa-brands fa-instagram" title="Instagram link"></i
+              ></a>
+              <a
+                href="https://t.me/+wlZgA90j7fllMmJi"
+                target="_blank"
+                title="Telegram link"
+                ><i class="fa-brands fa-telegram"></i
+              ></a>
             </div>
           </div>
         </div>

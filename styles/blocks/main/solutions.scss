@@ -16,15 +16,15 @@
   &--item {
     display: flex;
     flex-direction: column;
-    width: 387px;
+    width: 305px;
     border-radius: 20px;
-    padding: 44px 33px;
+    padding: 40px 26px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 51, 0.08);
     background: $color-white;
   }
 }
 
-.bx {
+i {
   font-size: 24px;
 }
 
@@ -40,7 +40,7 @@
 
 .solutions__item--info {
   h4 {
-    margin: 21px 0;
+    margin: 25px 0;
   }
 
   p {

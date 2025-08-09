@@ -46,7 +46,8 @@
         padding: 0.5rem 0;
       }
 
-      .bx-arrow-down-stroke {
+      .fa-arrow-down {
+        transition: all 0.3s ease;
         transform: rotate(180deg);
       }
     }
