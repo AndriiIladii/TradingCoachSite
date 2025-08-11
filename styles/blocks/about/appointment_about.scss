@@ -4,6 +4,10 @@
 .appointment__section {
   padding: 100px 0;
   background-color: $color-lightGreen;
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding: 50px 0;
+  }
 }
 
 .appointment__section--wrapper {
@@ -12,4 +16,8 @@
   align-items: center;
   flex-direction: column;
   row-gap: 30px;
+
+  @media screen and (max-width: $breakpoint__mm) {
+    text-align: center;
+  }
 }

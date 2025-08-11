@@ -3,6 +3,10 @@
 
 .solutions__section {
   padding: 100px 0;
+
+  @media screen and (max-width: $breakpoint__l) {
+    padding: 55px 0;
+  }
 }
 
 .solutions__info {
@@ -10,9 +14,28 @@
 }
 
 .solutions__cards {
-  margin-top: 92px;
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    margin-top: 65px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    margin-top: 90px;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    margin-top: 65px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-top: 45px;
+  }
   &--item {
     display: flex;
     flex-direction: column;
@@ -21,11 +44,37 @@
     padding: 40px 26px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 51, 0.08);
     background: $color-white;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      width: 275px;
+      padding: 25px 20px;
+    }
+
+    @media screen and (max-width: $breakpoint__xl) {
+      width: 245px;
+    }
+
+    @media screen and (max-width: $breakpoint__l) {
+      width: 335px;
+      padding: 40px 26px;
+    }
+
+    @media screen and (max-width: $breakpoint__mm) {
+      width: 70%;
+      padding: 50px 80px;
+      text-align: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      width: 100%;
+      padding: 40px 25px;
+    }
   }
 }
 
 i {
-  font-size: 24px;
+  font-size: clamp(0.875rem, 0.613rem + 0.99vw, 1.5rem);
 }
 
 .solutions__item--image {
@@ -41,9 +90,29 @@ i {
 .solutions__item--info {
   h4 {
     margin: 25px 0;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      margin: 20px 0;
+    }
   }
 
   p {
     margin-bottom: 44px;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: $breakpoint__l) {
+      margin-bottom: 44px;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: $breakpoint__xs) {
+      margin-bottom: 15px;
+    }
   }
 }

@@ -2,7 +2,15 @@
 @use "../../base/buttons";
 
 header {
-  padding: 32px 0 105px;
+  padding: 32px 0 0;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    position: sticky;
+    top: 0;
+    background-color: $color-white;
+    z-index: 4;
+    padding-bottom: 30px;
+  }
 }
 
 .header__wrapper {
@@ -14,6 +22,9 @@ header {
 .nav__wrapper {
   display: flex;
   align-items: center;
+  @media screen and (max-width: $breakpoint__ms) {
+    display: none;
+  }
 }
 
 .header__nav {

@@ -1,7 +1,38 @@
+@use "../../base/vars" as *;
+
 .about__hero {
   &--info {
     p {
       margin: 20px 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &--wrapper {
+    @media screen and (max-width: $breakpoint__mm) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--info {
+    @media screen and (max-width: $breakpoint__mm) {
+      max-width: 100%;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: $breakpoint__ms) {
+      margin-top: 0;
+    }
+  }
+
+  &--img {
+    @media screen and (max-width: $breakpoint__mm) {
+      width: 75%;
+      text-align: center;
     }
   }
 }

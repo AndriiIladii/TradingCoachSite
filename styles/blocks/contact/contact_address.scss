@@ -1,14 +1,34 @@
 @use "../../base/vars" as *;
 
+.section__contact {
+  padding: 60px 0 100px;
+}
+
 .section__address {
   padding: 100px 0;
   background-color: $color-lightGreen;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    padding: 60px 0;
+  }
 
   &--wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 90px;
+    @media screen and (max-width: $breakpoint__l) {
+      column-gap: 70px;
+    }
+
+    @media screen and (max-width: $breakpoint__ml) {
+      column-gap: 40px;
+    }
+
+    @media screen and (max-width: $breakpoint__ms) {
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
   }
 
   &--card {
@@ -21,6 +41,14 @@
     height: 225px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 51, 0.08);
     background-color: $color-white;
+
+    @media screen and (max-width: $breakpoint__l) {
+      width: 340px;
+    }
+
+    @media screen and (max-width: $breakpoint__ms) {
+      width: 430px;
+    }
   }
 
   &--info {

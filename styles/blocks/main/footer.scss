@@ -5,16 +5,33 @@
   background-color: $color-darkBlue;
   color: $color-white;
 
+  @media screen and (max-width: $breakpoint__ml) {
+    padding: 50px 0 25px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: $breakpoint__s) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    @media screen and (max-width: $breakpoint__ms) {
+      justify-content: space-between;
+    }
   }
 
   &__contacts {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      align-items: center;
+    }
 
     &--socials {
       display: flex;
@@ -33,6 +50,14 @@
   &__author {
     text-align: center;
     margin-top: 60px;
+
+    @media screen and (max-width: $breakpoint__ml) {
+      margin-top: 45px;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -71,4 +96,5 @@
 
 .fa-brands {
   color: $color-white;
+  font-size: clamp(1.25rem, 1.145rem + 0.39vw, 1.5rem);
 }

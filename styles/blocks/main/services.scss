@@ -7,10 +7,26 @@
   font-weight: 400;
   padding: 130px 0;
   background-color: $color-lightGreen;
+
+  @media screen and (max-width: $breakpoint__ml) {
+    padding: 80px 0 110px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 80px 0 60px;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-top: 60px;
+  }
 }
 
 .service__section--img {
   position: relative;
+
+  @media screen and (max-width: $breakpoint__s) {
+    width: 75%;
+  }
 
   &::after {
     position: absolute;
@@ -21,6 +37,10 @@
     width: 145px;
     height: 337px;
     background-image: url("../assets/hero_section/hero-photo-bg.png");
+
+    @media screen and (max-width: $breakpoint__ml) {
+      height: 100px;
+    }
   }
 
   img {
@@ -32,15 +52,58 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    column-gap: 35px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .service__section--info {
   max-width: 630px;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    max-width: 500px;
+  }
+
+  @media screen and (max-width: $breakpoint__xl) {
+    max-width: 440px;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    max-width: 390px;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 550px;
+    margin-top: 60px;
+  }
 }
 
 .service__info--heading {
   p {
     margin: 20px 0;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    text-align: center;
   }
 }
 
