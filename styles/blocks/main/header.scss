@@ -2,14 +2,14 @@
 @use "../../base/buttons";
 
 header {
-  padding: 32px 0 0;
+  padding: 2rem 0 0;
 
   @media screen and (max-width: $breakpoint__ms) {
     position: sticky;
     top: 0;
     background-color: $color-white;
     z-index: 4;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
   }
 }
 
@@ -22,17 +22,18 @@ header {
 .nav__wrapper {
   display: flex;
   align-items: center;
+
   @media screen and (max-width: $breakpoint__ms) {
     display: none;
   }
 }
 
 .header__nav {
-  margin-right: 65px;
+  margin-right: 4.0625rem;
 
   &--menu {
     display: flex;
-    column-gap: 40px;
+    column-gap: 2.5rem;
   }
 
   &--link {

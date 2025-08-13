@@ -3,7 +3,7 @@
 .about__hero {
   &--info {
     p {
-      margin: 20px 0;
+      margin: 1.25rem 0;
     }
 
     h1 {
@@ -21,7 +21,7 @@
   &--info {
     @media screen and (max-width: $breakpoint__mm) {
       max-width: 100%;
-      margin-top: 50px;
+      margin-top: 3.125rem;
     }
 
     @media screen and (max-width: $breakpoint__ms) {

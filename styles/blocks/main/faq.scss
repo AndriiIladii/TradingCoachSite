@@ -2,32 +2,32 @@
 
 .faq {
   &__section {
-    padding: 100px 0;
+    padding: 6.25rem 0;
 
     &--header {
-      margin-bottom: 90px;
+      margin-bottom: 5.625rem;
 
       @media screen and (max-width: $breakpoint__s) {
-        margin-bottom: 45px;
+        margin-bottom: 2.8125rem;
       }
     }
 
     @media screen and (max-width: $breakpoint__m) {
-      padding: 50px 0 80px;
+      padding: 3.125rem 0 5rem;
     }
 
     @media screen and (max-width: $breakpoint__m) {
-      padding: 35px 0 25px;
+      padding: 2.1875rem 0 1.5625rem;
     }
   }
 
   &__accordion {
-    margin: 0 0 30px;
+    margin: 0 0 1.875rem;
     position: relative;
     padding: 1.5rem;
     background-color: $color-lightGreen;
     border-radius: 0.5rem;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.1875rem 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
     &::before {
@@ -35,7 +35,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 5px;
+      width: 0.3125rem;
       height: 100%;
       background-color: $color-darkGreen;
     }

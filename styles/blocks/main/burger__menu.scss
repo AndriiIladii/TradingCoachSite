@@ -5,8 +5,8 @@
   display: none;
   cursor: pointer;
   position: fixed;
-  top: 50px;
-  right: 30px;
+  top: 3.125rem;
+  right: 1.875rem;
   z-index: 999;
 
   @media screen and (max-width: $breakpoint__ms) {
