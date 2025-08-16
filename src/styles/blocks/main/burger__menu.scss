@@ -87,3 +87,17 @@
     color: $color-darkGreen;
   }
 }
+
+.active__burger {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -0.625rem;
+    height: 0.125rem;
+    width: 100%;
+    background-color: $color-darkGreen;
+    opacity: 1;
+  }
+}

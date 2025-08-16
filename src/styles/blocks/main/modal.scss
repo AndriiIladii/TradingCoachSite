@@ -29,7 +29,7 @@
   background-color: $color-lightGreen;
   width: 37.5rem;
   max-width: 100%;
-  height: 38.75rem;
+  min-height: 38.75rem;
   padding: 1.875rem 3.125rem;
   border-radius: 1.875rem;
   position: relative;
@@ -78,10 +78,21 @@
   font-size: 1rem;
   margin: 0.75rem 0;
 }
-
 .form__field .error__text {
   color: red;
   font-size: 12px;
-  margin-top: -5px 0 10px;
+  margin: -5px 0 10px;
   display: none;
+}
+
+.form__field .form__input.input-error {
+  border-bottom: 2px solid red;
+}
+
+.form__field .form__input.input-error:focus {
+  border-bottom-color: red;
+}
+
+.form__field .form__input.input-error ~ .error__text {
+  display: block;
 }

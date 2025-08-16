@@ -10,6 +10,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon//favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon//site.webmanifest" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Oleksandr Boiko Trading Coaching</title>
   </head>
   <body>
@@ -22,22 +45,21 @@
             /></a>
           </div>
 
-          <div class="burger__nav">
+          <nav class="burger__nav">
             <ul class="burger__menu">
               <li class="burger__menu-item">
-                <a class="burger__link menu_link" href="index.html">Home</a>
+                <a
+                  class="burger__link menu_link active__burger"
+                  href="index.html"
+                  >Home</a
+                >
               </li>
               <li class="burger__menu-item">
                 <a class="burger__link menu_link" href="about.html">About</a>
               </li>
-              <li class="burger__menu-item">
-                <a class="burger__link menu_link" href="contact.html"
-                  >Contact</a
-                >
-              </li>
 
               <li class="burger__menu-item">
-                <button class="hero__btn btn">Contact Us</button>
+                <button class="hero__btn btn" type="button">Contact Us</button>
               </li>
             </ul>
             <div class="hamburger">
@@ -45,23 +67,24 @@
               <span class="bar"></span>
               <span class="bar"></span>
             </div>
-          </div>
+          </nav>
           <div class="nav__wrapper">
             <nav class="header__nav">
               <ul class="header__nav--menu">
                 <li>
-                  <a class="header__nav--link active" href="index.html">Home</a>
+                  <a class="header__nav--link active__menu" href="index.html"
+                    >Home</a
+                  >
                 </li>
                 <li>
                   <a class="header__nav--link" href="about.html">About</a>
                 </li>
-                <li>
-                  <a class="header__nav--link" href="contact.html">Contact</a>
-                </li>
               </ul>
             </nav>
             <div class="header__contact">
-              <button class="header__contact--btn btn">Contact Us</button>
+              <button class="header__contact--btn btn" type="button">
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
@@ -72,7 +95,7 @@
         <div class="container">
           <div class="hero__section--wrapper">
             <div class="hero__section--info">
-              <h1>Trading Coach</h1>
+              <h1>Trading Coaching</h1>
               <p>
                 What makes trading consistently profitable? A solid knowledge
                 base and the right psychological approach. Therefore, either you
@@ -90,7 +113,7 @@
                     </div>
                   </div>
                 </div>
-                <p>Succsess Result</p>
+                <p>Success Result</p>
               </div>
               <img src="../assets/hero_section/sasha.jpg" alt="hero" />
             </div>
@@ -119,7 +142,7 @@
                 <p>You will gain a new perspective on the markets</p>
                 <p>Your trading results should improve</p>
               </div>
-              <button class="service__section--btn btn">
+              <button class="service__section--btn btn" type="button">
                 Schedule a free session
               </button>
             </div>
@@ -272,9 +295,11 @@
         <div class="modal__container" aria-hidden="true">
           <div
             class="modal"
+            id="modal"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal_title"
+            tabindex="-1"
           >
             <h2 id="modal_title" class="modal__title">Contact Us</h2>
 
@@ -288,8 +313,8 @@
                     name="name"
                     class="form__input"
                     autocomplete="name"
-                    required
                     placeholder="John Doe"
+                    required
                   />
                   <p class="error__text" aria-live="polite">
                     Name can't be blank
@@ -305,8 +330,8 @@
                     name="email"
                     class="form__input"
                     autocomplete="email"
-                    required
                     placeholder="name@example.com"
+                    required
                   />
                   <p class="error__text" aria-live="polite">
                     Email can't be blank
@@ -324,12 +349,12 @@
                     class="form__input"
                     autocomplete="tel"
                     inputmode="tel"
+                    placeholder="+480XXXXXXXXX"
+                    pattern="^\+?[1-9]\d{6,14}$"
                     required
-                    placeholder="+380XXXXXXXXX"
-                    pattern="^\+?380\d{9}$"
                   />
                   <p class="error__text" aria-live="polite">
-                    Enter phone like +380XXXXXXXXX
+                    Enter phone like +480XXXXXXXXX
                   </p>
                 </div>
               </div>
@@ -363,7 +388,7 @@
               type="button"
               aria-label="Close"
             >
-              X
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -383,9 +408,6 @@
               <li class="footer__nav--item">
                 <a href="./about.html">About</a>
               </li>
-              <li class="footer__nav--item">
-                <a href="./contact.html">Contact</a>
-              </li>
             </ul>
           </nav>
           <div class="footer__contacts">
@@ -394,25 +416,37 @@
               <a
                 href="https://www.youtube.com/@OleksandrBoiko-TradingCoaching"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="YouTube link"
               >
-                <i class="fa-brands fa-youtube"></i
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i
               ></a>
               <a
                 href="https://www.twitch.tv/tradingcoachingoleksandr"
                 target="_blank"
-                ><i class="fa-brands fa-twitch" title="Twitch link"></i
+                rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-twitch"
+                  title="Twitch link"
+                  aria-hidden="true"
+                ></i
               ></a>
               <a
                 href="https://www.instagram.com/oleksandr_trading_coach/"
                 target="_blank"
-                ><i class="fa-brands fa-instagram" title="Instagram link"></i
+                rel="noopener noreferrer"
+                ><i
+                  class="fa-brands fa-instagram"
+                  title="Instagram link"
+                  aria-hidden="true"
+                ></i
               ></a>
               <a
-                href="https://t.me/+wlZgA90j7fllMmJi"
+                href="https://t.me/tradingcoachingob"
                 target="_blank"
+                rel="noopener noreferrer"
                 title="Telegram link"
-                ><i class="fa-brands fa-telegram"></i
+                ><i class="fa-brands fa-telegram" aria-hidden="true"></i
               ></a>
             </div>
           </div>
@@ -422,7 +456,5 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -29,7 +29,7 @@ header {
 }
 
 .header__nav {
-  margin-right: 4.0625rem;
+  margin-right: 2.0625rem;
 
   &--menu {
     display: flex;
@@ -61,5 +61,20 @@ header {
         transform: scaleX(1);
       }
     }
+  }
+}
+
+.active__menu {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.625rem;
+    height: 0.125rem;
+    width: 100%;
+    transform: scaleX(1);
+    background-color: $color-headings;
   }
 }

@@ -64,14 +64,14 @@ const openModal = () => {
 const closeModal = () => {
   modal.classList.remove("show");
   modal.setAttribute("aria-hidden", "true");
+  modalForm.reset();
+  modalForm
+    .querySelectorAll(".input-error")
+    .forEach((i) => i.classList.remove("input-error"));
+  modalForm
+    .querySelectorAll(".error__text")
+    .forEach((p) => (p.style.display = "none"));
 };
-
-openModalBtns.forEach((btn) => {
-  if (!btn.hasAttribute("type")) btn.setAttribute("type", "button");
-  btn.addEventListener("click", openModal);
-});
-
-if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
@@ -81,19 +81,34 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
 });
 
-try {
-  emailjs.init("SKcsEiQVkv2-_H0KY");
-} catch (e) {
-  console.error("EmailJS init error:", e);
-}
+openModalBtns.forEach((btn) => {
+  if (!btn.hasAttribute("type")) btn.setAttribute("type", "button");
+  btn.addEventListener("click", openModal);
+});
+
+if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
 modalForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  if (!modalForm.checkValidity()) {
-    modalForm.reportValidity();
-    return;
-  }
+  let isValid = true;
+
+  modalForm.querySelectorAll(".form__input").forEach((input) => {
+    const errorText = input
+      .closest(".form__field")
+      .querySelector(".error__text");
+
+    if (!input.value.trim() || !input.checkValidity()) {
+      isValid = false;
+      if (errorText) errorText.style.display = "block";
+      input.classList.add("input-error");
+    } else {
+      if (errorText) errorText.style.display = "none";
+      input.classList.remove("input-error");
+    }
+  });
+
+  if (!isValid) return;
 
   closeModal();
 
