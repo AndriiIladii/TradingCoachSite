@@ -3,6 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trading coaching by Oleksandr Boiko. Learn profitable strategies, improve psychology and consistency in trading. First consultation is free."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="en_US" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Oleksandr Boiko",
+        "jobTitle": "Forex Trading Coach",
+        "url": "https://your-domain.com/",
+        "sameAs": [
+          "https://www.youtube.com/@OleksandrBoiko-TradingCoaching",
+          "https://www.twitch.tv/tradingcoachingoleksandr",
+          "https://www.instagram.com/oleksandr_trading_coach/",
+          "https://t.me/tradingcoachingob"
+        ],
+        "areaServed": ["Europe", "CIS"],
+        "knowsAbout": [
+          "Forex",
+          "Trading psychology",
+          "Risk management",
+          "Backtesting"
+        ]
+      }
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -10,6 +38,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -19,21 +48,24 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../favicon//favicon-32x32.png"
+      href="../favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../favicon//favicon-16x16.png"
+      href="../favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="../favicon//site.webmanifest" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Oleksandr Boiko Trading Coaching</title>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>
+      Trading Coaching | Oleksandr Boiko – Learn to Trade Profitably
+    </title>
   </head>
   <body>
     <header id="header">
@@ -41,7 +73,9 @@
         <div class="header__wrapper">
           <div class="header__logo">
             <a href="./index.html">
-              <img src="../assets/header_section/logo.png" alt="Logo"
+              <img
+                src="../assets/header_section/logo.png"
+                alt="Oleksandr Boiko Trading Coaching logo"
             /></a>
           </div>
 
@@ -91,7 +125,7 @@
       </div>
     </header>
     <main>
-      <section class="hero__section about__hero">
+      <section class="hero__section about__hero" data-aos="fade-left">
         <div class="container">
           <div class="hero__section--wrapper about__hero--wrapper">
             <div class="hero__section--info about__hero--info">
@@ -121,7 +155,11 @@
               </p>
             </div>
             <div class="hero__section--img about__hero--img">
-              <img src="../assets/hero_section/sasha.jpg" alt="hero" />
+              <img
+                src="../assets/hero_section/sasha.jpg"
+                loading="lazy"
+                alt="Portrait of Oleksandr Boiko"
+              />
             </div>
           </div>
         </div>
@@ -196,10 +234,10 @@
                     inputmode="tel"
                     required
                     placeholder="+380XXXXXXXXX"
-                    pattern="^\+?380\d{9}$"
+                    pattern="^\+?[1-9]\d{6,14}$"
                   />
                   <p class="error__text" aria-live="polite">
-                    Enter phone like +380XXXXXXXXX
+                    Enter phone like +480XXXXXXXXX
                   </p>
                 </div>
               </div>
@@ -244,7 +282,9 @@
         <div class="footer__wrapper">
           <div class="footer__logo">
             <a href="#header"
-              ><img src="../assets/header_section/logo.png" alt="logo"
+              ><img
+                src="../assets/header_section/logo.png"
+                alt="Oleksandr Boiko Trading Coaching logo"
             /></a>
           </div>
           <nav class="footer__nav">

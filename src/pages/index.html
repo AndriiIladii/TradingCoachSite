@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trading coaching by Oleksandr Boiko. Learn profitable strategies, improve psychology and consistency in trading. First consultation is free."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="en_US" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -10,6 +16,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Oleksandr Boiko",
+        "jobTitle": "Forex Trading Coach",
+        "url": "https://your-domain.com/",
+        "sameAs": [
+          "https://www.youtube.com/@OleksandrBoiko-TradingCoaching",
+          "https://www.twitch.tv/tradingcoachingoleksandr",
+          "https://www.instagram.com/oleksandr_trading_coach/",
+          "https://t.me/tradingcoachingob"
+        ],
+        "areaServed": ["Europe", "CIS"],
+        "knowsAbout": [
+          "Forex",
+          "Trading psychology",
+          "Risk management",
+          "Backtesting"
+        ]
+      }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -19,21 +48,24 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../favicon//favicon-32x32.png"
+      href="../favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../favicon//favicon-16x16.png"
+      href="../favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="../favicon//site.webmanifest" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Oleksandr Boiko Trading Coaching</title>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>
+      Trading Coaching | Oleksandr Boiko – Learn to Trade Profitably
+    </title>
   </head>
   <body>
     <header id="header">
@@ -41,7 +73,9 @@
         <div class="header__wrapper">
           <div class="header__logo">
             <a href="./index.html">
-              <img src="../assets/header_section/logo.png" alt="Logo"
+              <img
+                src="../assets/header_section/logo.png"
+                alt="Logo of Oleksandr Boiko Trading Coaching"
             /></a>
           </div>
 
@@ -91,7 +125,7 @@
       </div>
     </header>
     <main>
-      <section class="hero__section">
+      <section class="hero__section" data-aos="fade-down">
         <div class="container">
           <div class="hero__section--wrapper">
             <div class="hero__section--info">
@@ -102,7 +136,9 @@
                 lack sufficient knowledge, or your behavior in the market is
                 ineffective. That’s exactly what we will improve.
               </p>
-              <button class="hero__btn btn">Get free consultation</button>
+              <button class="hero__btn btn" type="button">
+                Get free consultation
+              </button>
             </div>
             <div class="hero__section--img">
               <div class="hero__section--progress">
@@ -115,12 +151,16 @@
                 </div>
                 <p>Success Result</p>
               </div>
-              <img src="../assets/hero_section/sasha.jpg" alt="hero" />
+              <img
+                src="../assets/hero_section/sasha.jpg"
+                loading="lazy"
+                alt="Portrait of Oleksandr Boiko"
+              />
             </div>
           </div>
         </div>
       </section>
-      <section class="service__section">
+      <section class="service__section" data-aos="zoom-in">
         <div class="container">
           <div class="service__section--wrapper">
             <div class="service__section--img">
@@ -155,7 +195,12 @@
             <h2>What format of training do I offer?</h2>
           </div>
           <div class="solutions__cards">
-            <div class="solutions__cards--item">
+            <div
+              class="solutions__cards--item"
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-sine"
+            >
               <div class="solutions__item--image">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
@@ -168,7 +213,12 @@
                 </p>
               </div>
             </div>
-            <div class="solutions__cards--item">
+            <div
+              class="solutions__cards--item"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-sine"
+            >
               <div class="solutions__item--image">
                 <i class="fa-solid fa-handshake"></i>
               </div>
@@ -180,7 +230,12 @@
                 </p>
               </div>
             </div>
-            <div class="solutions__cards--item">
+            <div
+              class="solutions__cards--item"
+              data-aos="fade-right"
+              data-aos-duration="1100"
+              data-aos-easing="ease-in-sine"
+            >
               <div class="solutions__item--image">
                 <i class="fa-solid fa-laptop"></i>
               </div>
@@ -193,7 +248,12 @@
                 </p>
               </div>
             </div>
-            <div class="solutions__cards--item">
+            <div
+              class="solutions__cards--item"
+              data-aos="fade-right"
+              data-aos-duration="1300"
+              data-aos-easing="ease-in-sine"
+            >
               <div class="solutions__item--image">
                 <i class="fa-solid fa-flag-checkered"></i>
               </div>
@@ -208,7 +268,7 @@
           </div>
         </div>
       </section>
-      <section class="faq__section">
+      <section class="faq__section" data-aos="fade-up">
         <div class="container">
           <div class="faq__section--header">
             <h2>Frequently asked questions</h2>
@@ -399,7 +459,9 @@
         <div class="footer__wrapper">
           <div class="footer__logo">
             <a href="#header"
-              ><img src="../assets/header_section/logo.png" alt="logo"
+              ><img
+                src="../assets/header_section/logo.png"
+                alt="Oleksandr Boiko Trading Coaching logo"
             /></a>
           </div>
           <nav class="footer__nav">
@@ -456,5 +518,58 @@
         </div>
       </div>
     </footer>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the first session free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The initial call is completely free and has no time limit..."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When will I see results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your current level. Beginners need more groundwork..."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you trade yourself?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I actively trade as well. More details on the About page..."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I schedule a call?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book directly on this page or message me via social media."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will the session be with you or someone else?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only with me." }
+          },
+          {
+            "@type": "Question",
+            "name": "If I start from zero what should I do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can study free materials or learn with me. Full course costs $1000; no time limit."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
