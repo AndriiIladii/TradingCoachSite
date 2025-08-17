@@ -1,21 +1,25 @@
+// initModal.js
 export function initModal() {
-  const modal = document.querySelector(".modal__container");
+  const modalContainer = document.querySelector(".modal__container");
+  const modal = document.getElementById("modal");
   const modalForm = document.querySelector(".modal__form");
   const closeBtn = document.getElementById("close");
   const openModalBtns = document.querySelectorAll(
     ".header__contact--btn, .hero__btn, .service__section--btn, .about__contact--btn"
   );
 
-  if (!modal || !modalForm) return;
+  if (!modalContainer || !modal || !modalForm) return;
 
-  const openModal = () => {
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
+  const addHidden = () => {
+    modalContainer.classList.remove("show");
+    modalContainer.setAttribute("aria-hidden", "true");
   };
-  const closeModal = () => {
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-    modalForm.reset();
+  const removeHidden = () => {
+    modalContainer.classList.add("show");
+    modalContainer.setAttribute("aria-hidden", "false");
+  };
+
+  const resetFormUI = () => {
     modalForm
       .querySelectorAll(".input-error")
       .forEach((i) => i.classList.remove("input-error"));
@@ -24,12 +28,32 @@ export function initModal() {
       .forEach((p) => (p.style.display = "none"));
   };
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
+  const openModal = () => {
+    removeHidden();
+    modal.setAttribute("tabindex", "-1");
+    modal.focus();
+  };
+
+  const closeModal = () => {
+    addHidden();
+    modalForm.reset();
+    resetFormUI();
+  };
+
+  try {
+    emailjs.init("SKcsEiQVkv2-_H0KY");
+  } catch (e) {
+    console.error("EmailJS init error:", e);
+  }
+
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target === modalContainer) closeModal();
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
+    if (e.key === "Escape" && modalContainer.classList.contains("show")) {
+      closeModal();
+    }
   });
 
   openModalBtns.forEach((btn) => {
@@ -45,9 +69,8 @@ export function initModal() {
     let isValid = true;
 
     modalForm.querySelectorAll(".form__input").forEach((input) => {
-      const errorText = input
-        .closest(".form__field")
-        ?.querySelector(".error__text");
+      const field = input.closest(".form__field");
+      const errorText = field?.querySelector(".error__text");
 
       if (!input.value.trim() || !input.checkValidity()) {
         isValid = false;
@@ -60,15 +83,13 @@ export function initModal() {
     });
 
     if (!isValid) return;
-
-    closeModal();
-
+    const fd = new FormData(modalForm);
     const params = {
-      senderName: document.getElementById("name")?.value.trim(),
-      senderEmail: document.getElementById("email")?.value.trim(),
-      senderPhone: document.getElementById("tel")?.value.trim(),
-      contactMethod: document.getElementById("contact_method")?.value,
-      pageTitle: document.title,
+      senderName: (fd.get("name") || "").toString().trim(),
+      senderEmail: (fd.get("email") || "").toString().trim(),
+      senderPhone: (fd.get("tel") || "").toString().trim(),
+      contactMethod: (fd.get("contact_method") || "").toString(),
+      pageTitle: "Oleksandr Boiko",
     };
 
     const serviceId = "service_8p9t7mk";
@@ -79,9 +100,9 @@ export function initModal() {
 
     try {
       await emailjs.send(serviceId, templateId, params);
-      await Swal.fire({ title: "Your Email was sent!", icon: "success" });
-      modalForm.reset();
       closeModal();
+
+      await Swal.fire({ title: "Your Email was sent!", icon: "success" });
     } catch (error) {
       console.error("FAILED...", error);
       Swal.fire({
