@@ -3,7 +3,7 @@ export function initModal() {
   const modalForm = document.querySelector(".modal__form");
   const closeBtn = document.getElementById("close");
   const openModalBtns = document.querySelectorAll(
-    ".header__contact--btn, .hero__btn, .service__section--btn"
+    ".header__contact--btn, .hero__btn, .service__section--btn, .about__contact--btn"
   );
 
   if (!modal || !modalForm) return;
