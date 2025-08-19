@@ -1,0 +1,23 @@
+@use "../../base/vars" as *;
+@use "../../base/buttons";
+
+.appointment__section {
+  padding: 6.25rem 0;
+  background-color: $color-lightGreen;
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding: 3.125rem 0;
+  }
+}
+
+.appointment__section--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.875rem;
+
+  @media screen and (max-width: $breakpoint__mm) {
+    text-align: center;
+  }
+}

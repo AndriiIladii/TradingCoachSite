@@ -1,0 +1,147 @@
+@use "../../base/buttons";
+@use "../../base/vars" as *;
+
+.hero__section {
+  padding: 6.5625rem 0 8.125rem;
+
+  @media screen and (max-width: $breakpoint__l) {
+    padding: 5rem 0 6.875rem;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding-bottom: 5rem;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-bottom: 3.125rem;
+  }
+}
+
+.hero__section--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    justify-content: space-between;
+    column-gap: 1.875rem;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    flex-direction: column-reverse;
+  }
+}
+
+.hero__section--info {
+  max-width: 39.375rem;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    max-width: 31.25rem;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    max-width: 29.375rem;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    max-width: 24.375rem;
+  }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    max-width: 18.75rem;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  p {
+    margin: 0.625rem 0 2.8125rem;
+  }
+}
+
+.hero__section--img {
+  position: relative;
+
+  @media screen and (max-width: $breakpoint__s) {
+    width: 60%;
+    margin-bottom: 2.5rem;
+  }
+
+  &::after {
+    position: absolute;
+    left: 1.125rem;
+    top: 0.8125rem;
+    z-index: -1;
+    content: "";
+    width: 9.0625rem;
+    height: 21.0625rem;
+    background-image: url("../assets/hero_section/hero-photo-bg.png");
+
+    @media screen and (max-width: $breakpoint__ml) {
+      height: 6.25rem;
+    }
+  }
+
+  img {
+    border-radius: 13.375rem 0 13.6875rem 13.5rem;
+  }
+}
+
+.hero__section--progress {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.625rem;
+  align-items: center;
+  position: absolute;
+  background-color: $color-white;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 1.125rem;
+  width: 14.75rem;
+  height: 7.25rem;
+  box-shadow: 0 0.625rem 1.5625rem 0 rgba(2, 147, 52, 0.1);
+
+  p {
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.5;
+    color: $color-headings;
+    max-width: 4.8125rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: none;
+  }
+}
+
+.outer {
+  height: 4.8125rem;
+  width: 4.8125rem;
+  border-radius: 50%;
+  background-color: #f7fff6;
+  padding: 0.625rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5625rem;
+  height: 3.5625rem;
+  border-radius: 50%;
+  background-color: $color-white;
+}
+
+.number {
+  font-weight: 500;
+  font-size: 1.0625rem;
+  line-height: 1.41;
+  color: $color-headings;
+}

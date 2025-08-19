@@ -1,0 +1,36 @@
+// Fonts
+
+$font-main: "Ubuntu", sans-serif;
+$font-secondary: "Mulish", sans-serif;
+
+// Colors
+
+$color-white: #fff;
+$color-lightGreen: #f7fff6;
+$color-green: rgba(2, 152, 55, 0.1);
+$color-darkGreen: #029837;
+$color-darkBlue: rgba(0, 0, 51, 0.95);
+$color-headings: #003;
+$color-gray: #f2f1f1;
+
+// Sizes
+
+$btn-border: 2px solid #029837;
+$btn-padding: 13px 20px;
+$btn-radius: 20px;
+
+// Base
+$container-width: 1260px;
+$container-padding-x: 20px;
+
+// Breakpoints
+
+$breakpoint__xxl: 1250px;
+$breakpoint__xl: 1190px;
+$breakpoint__l: 1040px;
+$breakpoint__ml: 875px;
+$breakpoint__m: 768px;
+$breakpoint__mm: 750px;
+$breakpoint__ms: 650px;
+$breakpoint__s: 570px;
+$breakpoint__xs: 375px;

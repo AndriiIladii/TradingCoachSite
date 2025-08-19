@@ -1,0 +1,99 @@
+@use "../../base/buttons";
+@use "../../base/vars" as *;
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: $color-darkGreen;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal__container.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: $color-lightGreen;
+  width: 37.5rem;
+  max-width: 100%;
+  min-height: 38.75rem;
+  padding: 1.875rem 3.125rem;
+  border-radius: 1.875rem;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint__ml) {
+    width: 90%;
+    padding: 1.25rem 2.5rem;
+  }
+}
+
+.modal__title {
+  text-align: center;
+  margin-bottom: 0.9375rem;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 0.9375rem;
+  right: 1.25rem;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.modal__form .form__button {
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  color: $color-lightGreen;
+  background-color: $color-darkGreen;
+  padding: 1.25rem 2rem;
+  border-radius: 1.25rem;
+  font-family: $font-secondary;
+  margin: 0 auto;
+}
+
+.form__field .form__input {
+  opacity: 0.7;
+  width: 100%;
+  padding: 0.625rem 0.9375rem 0.9375rem 0.3125rem;
+  background-color: transparent;
+  border-bottom: 2px solid $color-darkGreen;
+  outline: none;
+  font-size: 1rem;
+  margin: 0.75rem 0;
+}
+.form__field .error__text {
+  color: red;
+  font-size: 12px;
+  margin: -5px 0 10px;
+  display: none;
+}
+
+.form__field .form__input.input-error {
+  border-bottom: 2px solid red;
+}
+
+.form__field .form__input.input-error:focus {
+  border-bottom-color: red;
+}
+
+.form__field .form__input.input-error ~ .error__text {
+  display: block;
+}

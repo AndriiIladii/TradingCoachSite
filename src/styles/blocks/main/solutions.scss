@@ -1,0 +1,118 @@
+@use "../../base/buttons";
+@use "../../base/vars" as *;
+
+.solutions__section {
+  padding: 6.25rem 0;
+
+  @media screen and (max-width: $breakpoint__l) {
+    padding: 3.4375rem 0;
+  }
+}
+
+.solutions__info {
+  text-align: center;
+}
+
+.solutions__cards {
+  margin-top: 5.625rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    margin-top: 4.0625rem;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    margin-top: 5.625rem;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    margin-top: 4.0625rem;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    margin-top: 2.8125rem;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    width: 19.0625rem;
+    border-radius: $btn-radius;
+    padding: 2.5rem 1.5625rem;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 51, 0.08);
+    background: $color-white;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      width: 17.1875rem;
+      padding: 1.5625rem 1.25rem;
+    }
+
+    @media screen and (max-width: $breakpoint__xl) {
+      width: 15.3125;
+    }
+
+    @media screen and (max-width: $breakpoint__l) {
+      width: 20.9375;
+      padding: 2.5rem 1.5625rem;
+    }
+
+    @media screen and (max-width: $breakpoint__mm) {
+      width: 70%;
+      padding: 3.125rem 5rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      width: 100%;
+      padding: 2.5rem 1.5625rem;
+    }
+  }
+}
+
+i {
+  font-size: clamp(0.875rem, 0.613rem + 0.99vw, 1.5rem);
+}
+
+.solutions__item--image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4375rem;
+  width: 4.0625rem;
+  height: 3.4375rem;
+  background-color: $color-lightGreen;
+}
+
+.solutions__item--info {
+  h4 {
+    margin: 1.5625rem 0;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      margin: 1.25rem 0;
+    }
+  }
+
+  p {
+    margin-bottom: 2.75rem;
+
+    @media screen and (max-width: $breakpoint__xxl) {
+      margin-bottom: 1.25rem;
+    }
+
+    @media screen and (max-width: $breakpoint__l) {
+      margin-bottom: 2.75rem;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      margin-bottom: 1.875rem;
+    }
+
+    @media screen and (max-width: $breakpoint__xs) {
+      margin-bottom: 0.9375rem;
+    }
+  }
+}

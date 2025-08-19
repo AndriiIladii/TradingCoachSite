@@ -1,0 +1,103 @@
+@use "../../base/vars" as *;
+@use "../../base/buttons";
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 3.125rem;
+  right: 1.875rem;
+  z-index: 999;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    display: block;
+  }
+
+  .bar {
+    display: block;
+    width: 1.875rem;
+    height: 0.25rem;
+    margin: 0.3125rem auto;
+    transition: all 0.3s ease-in-out;
+    background-color: $color-darkGreen;
+  }
+
+  &.active {
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(1) {
+      transform: translateY(0.625rem) rotate(45deg);
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+}
+
+.burger__menu {
+  z-index: 999;
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2.875rem;
+  position: fixed;
+  right: -34.375rem;
+  top: 0;
+  background-color: $color-lightGreen;
+  width: 15.625rem;
+  height: 100%;
+  transition: all 0.3s ease;
+
+  &.active {
+    right: 0;
+  }
+}
+
+.burger__link {
+  color: $color-darkGreen;
+  transition: 0.2s ease;
+  position: relative;
+  font-size: clamp(1rem, 0.895rem + 0.39vw, 1.25rem);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.625rem;
+    height: 0.125rem;
+    width: 100%;
+    background-color: $color-darkGreen;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    color: $color-darkGreen;
+  }
+}
+
+.active__burger {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -0.625rem;
+    height: 0.125rem;
+    width: 100%;
+    background-color: $color-darkGreen;
+    opacity: 1;
+  }
+}

@@ -4,15 +4,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   entry: {
-    main: "./scripts/main.js",
-    about: "./scripts/about.js",
-    contact: "./scripts/contact.js",
+    main: "./src/scripts/main.js",
+    about: "./src/scripts/about.js",
   },
 
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "/",
   },
 
   devServer: {
@@ -45,21 +45,15 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "./src/pages/index.html",
       filename: "index.html",
       chunks: ["main"],
       inject: "body",
     }),
     new HtmlWebpackPlugin({
-      template: "src/about.html",
+      template: "./src/pages/about.html",
       filename: "about.html",
       chunks: ["about"],
-      inject: "body",
-    }),
-    new HtmlWebpackPlugin({
-      template: "src/contact.html",
-      filename: "contact.html",
-      chunks: ["contact"],
       inject: "body",
     }),
 

@@ -1,0 +1,130 @@
+@use "../../base/vars" as *;
+@use "../../base/buttons";
+
+.service__section {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  padding: 8.125rem 0;
+  background-color: $color-lightGreen;
+
+  @media screen and (max-width: $breakpoint__ml) {
+    padding: 5rem 0 6.875rem;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    padding: 5rem 0 3.75rem;
+  }
+
+  @media screen and (max-width: $breakpoint__s) {
+    padding-top: 3.75rem;
+  }
+}
+
+.service__section--img {
+  position: relative;
+
+  @media screen and (max-width: $breakpoint__s) {
+    width: 75%;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0px;
+    top: 0.5rem;
+    content: "";
+    z-index: -1;
+    width: 9.0625rem;
+    height: 21.0625rem;
+    background-image: url("../assets/hero_section/hero-photo-bg.png");
+
+    @media screen and (max-width: $breakpoint__ml) {
+      height: 6.25rem;
+    }
+  }
+
+  img {
+    border-radius: 13.375rem 0 13.6875rem 13.5rem;
+  }
+}
+
+.service__section--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    justify-content: space-between;
+    column-gap: 3.125rem;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    column-gap: 2.1875rem;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.service__section--info {
+  max-width: 39.375rem;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    max-width: 31.25rem;
+  }
+
+  @media screen and (max-width: $breakpoint__xl) {
+    max-width: 27.5rem;
+  }
+
+  @media screen and (max-width: $breakpoint__l) {
+    max-width: 24.375rem;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 34.375rem;
+    margin-top: 3.75rem;
+  }
+}
+
+.service__info--heading {
+  p {
+    margin: 1.25rem 0;
+  }
+
+  @media screen and (max-width: $breakpoint__m) {
+    text-align: center;
+  }
+}
+
+.service__info--checkboxes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6875rem;
+  margin-bottom: 2.75rem;
+
+  p {
+    position: relative;
+    margin-left: 1.4375rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1.5625rem;
+      top: 0.3125rem;
+      background-image: url("../assets/service_section/checkbox.svg");
+      width: 17px;
+      aspect-ratio: 1;
+    }
+  }
+}

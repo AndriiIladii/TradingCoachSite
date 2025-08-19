@@ -1,0 +1,23 @@
+// Base
+
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/vars" as *;
+@use "./base/base";
+@use "./base/buttons";
+
+// Main Blocks
+
+@use "./blocks/main/header";
+@use "./blocks/main/hero";
+@use "./blocks/main/services";
+@use "./blocks/main/solutions";
+@use "./blocks/main/faq";
+@use "./blocks/main/footer";
+@use "./blocks/main/burger__menu";
+@use "./blocks/main/modal";
+
+// About Blocks
+
+@use "./blocks/about/hero_about";
+@use "./blocks/about/appointment_about";
