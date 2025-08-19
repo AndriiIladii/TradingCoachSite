@@ -29,7 +29,7 @@ module.exports = {
     port: 3000,
     watchFiles: ["src/**/*"],
     liveReload: true,
-    historyApiFallback: false, // у нас MPA, не SPA
+    historyApiFallback: false,
   },
 
   module: {
@@ -76,7 +76,13 @@ module.exports = {
       filename: isDev ? "styles.css" : "styles.[contenthash:8].css",
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "favicon", to: "" }],
+      patterns: [
+        {
+          from: path.resolve(__dirname, "favicon"),
+          to: ".",
+          noErrorOnMissing: true,
+        },
+      ],
     }),
   ],
 };
